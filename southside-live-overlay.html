@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Southside Fight Series OBS Overlay</title>
+    <link rel="stylesheet" href="styles/overlay.css" />
+  </head>
+  <body>
+    <main id="program" aria-label="Broadcast overlay">
+      <section class="scorebug">
+        <div class="logo-wrap" aria-hidden="true">
+          <img src="images/southside1.jpeg" alt="" />
+        </div>
+
+        <div class="corner corner-red">
+          <div class="corner-label" id="redCornerLabel">Red corner</div>
+          <div class="fighter-name" id="redName">RED FIGHTER</div>
+        </div>
+
+        <div class="center-panel">
+          <div class="round-label" id="roundLabel">ROUND 1</div>
+          <div class="timer" id="timer">3:00</div>
+        </div>
+
+        <div class="corner corner-blue">
+          <div class="corner-label" id="blueCornerLabel">Blue corner</div>
+          <div class="fighter-name" id="blueName">BLUE FIGHTER</div>
+        </div>
+
+        <div class="accent-line"></div>
+      </section>
+    </main>
+
+    <section id="controls" aria-label="Operator controls">
+      <div class="control-title">
+        <h1>Southside Fight Series — operator controls</h1>
+      </div>
+
+      <div class="control-grid">
+        <label
+          >Red label
+          <input
+            class="red-input"
+            id="redCornerInput"
+            value="RED CORNER"
+            maxlength="20"
+          />
+        </label>
+        <label
+          >Red fighter
+          <input
+            class="red-input"
+            id="redInput"
+            value="RED FIGHTER"
+            maxlength="32"
+          />
+        </label>
+        <label
+          >Blue label
+          <input
+            class="blue-input"
+            id="blueCornerInput"
+            value="BLUE CORNER"
+            maxlength="20"
+          />
+        </label>
+        <label
+          >Blue fighter
+          <input
+            class="blue-input"
+            id="blueInput"
+            value="BLUE FIGHTER"
+            maxlength="32"
+          />
+        </label>
+        <label
+          >Round
+          <input id="roundInput" type="number" value="1" min="1" max="20" />
+        </label>
+        <label
+          >Round time
+          <input
+            id="durationInput"
+            value="3:00"
+            maxlength="5"
+            inputmode="numeric"
+          />
+        </label>
+        <div class="buttons">
+          <button class="primary" id="startPause">Start</button>
+          <button class="danger" id="reset">Reset</button>
+          <button id="minusTen">−10s</button>
+          <button id="plusTen">+10s</button>
+          <button id="previousRound">Previous</button>
+          <button id="nextRound">Next round</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="scripts/overlay.js"></script>
+  </body>
+</html>
